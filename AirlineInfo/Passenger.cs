@@ -12,7 +12,7 @@ namespace AirlineInfo
         Famale
     }
 
-    public class Passenger:IPassenger
+    public class Passenger
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }
@@ -90,7 +90,7 @@ namespace AirlineInfo
             Console.Write("| {0}", (DateOfBirth.Date.ToString()).PadRight(12));
             Console.Write("| {0}", (SexPass.ToString()).PadRight(8));
             Console.WriteLine("| {0}", (FClass.Flyclass.ToString()).PadRight(12));
-            Console.WriteLine("---------------------------------------------------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------");
             //Console.WriteLine();
         }
 

@@ -18,7 +18,7 @@ namespace AirlineInfo
       InFlight
     }
 
-    public class FlightInformation:IFlightInformation
+    public class FlightInformation
     {
         public DateTime DTArrival { get; set; }
         public DateTime DTDeparture { get; set; }
@@ -36,7 +36,7 @@ namespace AirlineInfo
             Status flightStatus, string gate, params FlyClass[] fClass)
         {
             DTArrival = dtArrival;
-            DTDeparture = DTDeparture;
+            DTDeparture = dtDeparture;
             FlightN = flightN;
             CityArrival = cityArrival;
             CityDeparture = cityDeparture;
@@ -117,8 +117,7 @@ namespace AirlineInfo
 
         public void Print()
         {
-            //Console.WriteLine("FLIGHT INFORMATION");
-            //Console.Write(FlightInformation.);
+          
             Console.Write("|{0}", DTArrival.ToString().PadRight(21));
             Console.Write("|{0}", DTDeparture.ToString().PadRight(23));
             Console.Write("|{0}", FlightN.PadRight(8));

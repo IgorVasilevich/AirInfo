@@ -46,8 +46,6 @@
     <Compile Include="AirInfo.cs" />
     <Compile Include="FlightInformation.cs" />
     <Compile Include="FlyClass.cs" />
-    <Compile Include="IFlightInformation.cs" />
-    <Compile Include="IPassenger.cs" />
     <Compile Include="Passenger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

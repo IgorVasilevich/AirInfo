@@ -51,7 +51,7 @@ namespace AirlineInfo
                         {
                             Console.Clear();
                             Console.WriteLine("1.View information about Fligts");
-                            Console.WriteLine("2.View information about Flights woth prices");
+                            Console.WriteLine("2.View information about Flights with prices");
                             Console.WriteLine("0.Back");
                             int choiseCase1 = int.Parse(Console.ReadLine());
                             if (choiseCase1 == 1)
@@ -83,7 +83,7 @@ namespace AirlineInfo
                                 Console.ReadLine();
                             }
                             break;
-                            //Console.ReadLine();
+                            
                             if (choiseCase1 == 0)
                                 break;
                         }
@@ -133,34 +133,11 @@ namespace AirlineInfo
                                         break;
                                     }
                                 }
-                                Console.WriteLine("Enter new date and time arrival(dd/mm/yyyy hh:mm:ss)");
-                                DateTime dTArrival = DateTime.Parse(Console.ReadLine());
-                                Console.WriteLine("Enter new date and time departure(dd/mm/yyyy hh:mm:ss)");
-                                DateTime dTDeparture = DateTime.Parse(Console.ReadLine());
-                                Console.WriteLine("Enter new FlightNumber:");
-                                string flightN = Console.ReadLine();
-                                Console.WriteLine("Enter new city of arrival:");
-                                string cityArrival = Console.ReadLine();
-                                Console.WriteLine("Enter new city of departure:");
-                                string cityDeparture = Console.ReadLine();
-                                Console.WriteLine("Enter new terminal:");
-                                string terminal = Console.ReadLine();
-                                Console.WriteLine("Enter new flight status:");
-                                Status flightStatus = (Status)Enum.Parse(typeof(Status), Console.ReadLine());
-                                Console.WriteLine("Enter new gate:");
-                                string gate = Console.ReadLine();
-                                FlyClass[] fClass = new FlyClass[2];
-                                fClass[0] = new FlyClass(FlyC.Business);
-                                fClass[1] = new FlyClass(FlyC.Ecocnomy);
-                                for (int i = 0; i < fClass.Length; i++)
-                                {
-
-                                    Console.WriteLine("Enter price for{0}", fClass[i].Flyclass);
-                                    fClass[i].Price = float.Parse(Console.ReadLine());
-                                }
-                                AirLineinfo[iter] = new AirInfo(new FlightInformation(dTArrival, dTDeparture, flightN, cityArrival, cityDeparture,
-                                terminal, flightStatus, gate, fClass), new Passenger(null, null, null, null, new DateTime(), Sex.Male, new FlyClass(FlyC.Ecocnomy)));
                                 
+                                AirLineinfo[iter] = new AirInfo(new FlightInformation(new DateTime(), new DateTime(), "0", "", "",
+                                "", new Status(), ""), new Passenger(null, null, null, null, new DateTime(), Sex.Male, new FlyClass(FlyC.Ecocnomy)));
+
+                                AirLineinfo[iter].FlightI.Add();
                             }
                             if (choiseCase3 == 2)
                             {
